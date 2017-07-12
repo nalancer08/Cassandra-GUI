@@ -5,7 +5,7 @@
 		<% if ( project.image ) { %>
 			<img class="img-responsive" src="<%= project.image %>" alt="">
 		<% } else { %>
-			<img class="img-responsive" src="<?php $site->img('/login/du_logo.png'); ?>" alt="">
+			<img class="img-responsive" src="<?php //$site->img('/login/du_logo.png'); ?>" alt="">
 		<% } %>
 			
 		<h2> <%= project.name %> </h2>

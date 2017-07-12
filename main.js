@@ -8,5 +8,5 @@ app.on('ready', () => {
       width: 1200
   });
 
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
+  mainWindow.loadURL('file://' + __dirname + '/index-page.html');
 });
