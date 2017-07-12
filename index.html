@@ -1,94 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Ladybug</title>
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
-</head>
-<body>
-	<!-- Base markup -->
-	<section>
-		<div class="container">
-			<div id="client">
-				<!--  -->
+	<head>
+		<meta charset="UTF-8">
+		<title>Cassandra GUI V.1.0</title>
+
+		<!-- Stylesheets -->
+
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700,700italic|Raleway:300,300:latin,500,500:latin,700,700:latin|Montserrat:400,700,700:latin|Oswald:400,700,700:latin">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+		<link rel="stylesheet" type="text/css" href="css/plugins.css">
+		<link rel="stylesheet" type="text/css" href="css/project.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	</head>
+
+	<body>
+		
+		<div id="ladybug-root" class="ladybug-app"></div>
+
+		<script type="text/template" id="page-login">
+			<div class="wrapper">
+				<header class="site-header">
+					<section class="section section-login">
+					<!-- <img class="hide-mobile img-responsive" src="" alt=""> -->
+
+						<div class="block-content">
+					
+							<div class="admin-ui-metabox metabox-rounded login-box">
+
+								<section class="metabox-content">
+
+									<div class="login-logo">
+										<img class="img-responsive" src="http://appbuilders.com.mx/labs/du/images//login/du_logo.png" alt="">
+									<!-- <img class="hide-mobile img-responsive" src="http://appbuilders.com.mx/labs/du/images//login/AB_negro.png" alt=""> -->
+									</div>
+
+									<form method="post" action="">
+										<div class="form-fields">
+											<div class="form-group">
+												<div tabindex="1" class="input-group login-user">
+													<div class="input-group-addon"><i class="fa fa-fw fa-user"></i></div>
+													<input placeholder="User" class="form-control input-block user" id="user" name="user" type="text">
+												</div>
+												<div class="input-group login-pass">
+													<div class="input-group-addon"><i class="fa fa-fw fa-lock"></i></div>
+													<input placeholder="Password" class="form-control input-block pass" id="pass" name="pass" type="password">
+												</div>
+											</div>
+										</div>
+										<div class="form-actions">
+
+											<div class="row row-md row-sm">
+												<div class="col col-md col-sm col-md-6 col-sm-6 col-6 forgot-password">
+													<p><a href="http://competencias.americantrust.com.mx/admin/recover">Forgot password?</a></p>
+												</div>
+												<div class="col col-md col-sm col-md-6 col-sm-6 col-6 remember-me">
+													<label for="remember-me">
+														<input name="remember-me" id="remember-me" type="checkbox">
+														<span>Remember me</span>
+													</label>
+												</div>
+											</div>
+
+											<button class="button button-primary button-block button-login" type="submit">Press for simply du</button>
+										</div>
+									</form>
+								</section>
+							</div>
+						</div>		
+					</section>
+				</header>
 			</div>
-		</div>
-	</section>
+		</script>
 
-	<!-- Templates -->
-	<script type="text/template" id="page-home">
-		<h3>Welcome to the Sample Application</h3>
-		<a href="#/contact" class="btn btn-default"><i class="fa fa-envelope"></i> Contact Us</a>
-	</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+		<script type="text/javascript" src="js/ladybug2.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+		<script type="text/javascript" src="js/aes.js"></script>
+		<script type="text/javascript" src="js/masonry.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50/jquery.form.min.js"></script>
+		<script type="text/javascript" src="js/plugins.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 
-	<script type="text/template" id="page-contact">
-		<h4><a href="#/home"><i class="fa fa-home"></i> Home</a> <span class="text-muted">&rsaquo;</span> Get in touch with us</h4>
-		<%= app.module.partials.formContact() %>
-	</script>
-
-	<script type="text/template" id="partial-form-contact">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<form action="" method="post">
-					<div class="form-group">
-						<label for="name" class="control-label">Your name</label>
-						<input type="text" name="name" id="name" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="email" class="control-label">Your email</label>
-						<input type="text" name="email" id="email" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="subject" class="control-label">Message title</label>
-						<input type="text" name="subject" id="subject" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="message" class="control-label">Your message</label>
-						<textarea name="message" id="message" class="form-control"></textarea>
-					</div>
-					<div class="text-right">
-						<button class="btn btn-primary" type="submit">Send message</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</script>
-
-	<!-- External libraries -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.0/underscore.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-	<!-- Load compiled library -->
-	<script type="text/javascript" src="dist/ladybug.js"></script>
-
-	<!-- Load library sources -->
-	<script type="text/javascript" src="src/class.js"></script>
-	<script type="text/javascript" src="src/utils.js"></script>
-	<script type="text/javascript" src="src/module.js"></script>
-	<script type="text/javascript" src="src/router.js"></script>
-
-	<script type="text/javascript" src="src/application.js"></script>
-	<script type="text/javascript" src="src/facebook.js"></script>
-
-	<!-- Load sample files -->
-	<script type="text/javascript" src="sample/app_sample.js"></script>
-	<script type="text/javascript" src="sample/module_home.js"></script>
-	<script type="text/javascript" src="sample/module_contact.js"></script>
-	<script type="text/javascript">
-		var constants = {
-			fbAppId: '345999762254177'
-		};
-		var app;
-		app = new AppSample({
-			element: '#client'
-		});
-		app.registerModule('home', new ModuleHome);
-		app.registerModule('contact', new ModuleContact);
-	</script>
-
-</body>
+	</body>
 </html>

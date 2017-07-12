@@ -1,0 +1,76 @@
+		<div class="push"></div>
+	</div>
+	<footer class="site-footer">
+
+		<!-- <div class="inner">
+			<div class="row">
+				<div class="col col-3">
+					<nav>
+						<ul class="social-links">
+							<li><a href="#"><i class="fa fa-fw fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-fw fa-instagram"></i></a></li>
+							<li><a href="#"><i class="fa fa-fw fa-facebook"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col col-4 col-offset-5">
+					<a href="#idcontacto" class="button button-trans" data-popup="inline">Llámanos</a>
+					<a href="#idcontacto" class="button button-trans" data-popup="inline">Escríbenos</a>
+					<img src="<?php $site->img('/templates/imagen-footer.png') ?>" alt="" class="img-responsive">
+				</div>
+			</div>
+		</div> -->
+	</footer>
+
+	<section class="section section-terminos mfp-hide popup" id="terminos">
+		<div class="boxfix-vert">
+			<div class="margins">
+				<h2 class="titulo-popup">TÉRMINOS Y CONDICIONES</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section class="section section-contacto mfp-hide" id="idcontacto">
+		<img class="img-cierre" src="<?php $site->img('/templates/cierre-esq.png') ?>" alt="">
+		<div class="boxfix-vert">
+			<div class="margins">
+				<h2 class="titulo-contacto">CONTACTO</h2>
+				<form class="form-contact" id="form-contact" action="<?php $site->urlTo('/ajax', true); ?>" method="post" data-submit="ajax">
+					<input type="hidden" name="action" value="contacto">
+					<div class="form-fields">
+						<div class="form-group">
+							<input placeholder="Nombre" type="text" name="nombre" id="name" class="input-block form-control" data-validate="required">
+						</div>
+						<div class="row">
+							<div class="col col-6">
+								<div class="form-group">
+									<input placeholder="Mail" type="text" name="email" id="email" class="input-block form-control" data-validate="required">
+								</div>
+							</div>
+							<div class="col col-6">
+								<div class="form-group">
+									<input placeholder="Celular" type="text" name="celular" id="celular" class="input-block form-control" data-validate="required">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<textarea placeholder="Mensaje" name="mensaje" id="mensaje" class="input-block form-control" data-validate="required"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-3 col-offset-9">
+							<div class="form-actions">
+								<button type="submit" class="button button-block button-contact">ENVIAR<img src="<?php $site->img('/templates/btn-right.png') ?>" alt=""></button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section> -->
