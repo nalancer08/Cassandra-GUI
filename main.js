@@ -9,4 +9,7 @@ app.on('ready', () => {
   });
 
   mainWindow.loadURL('file://' + __dirname + '/index-page.html');
+  mainWindow.once('ready-to-show', () => {
+     mainWindow.show()
+ });
 });

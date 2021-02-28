@@ -143,6 +143,7 @@ ModuleLogin = DuModule.extend({
 		$('body').addClass('login'); // Fix to make it full screen, only in this module
 		$('.button-login').on('click', function(e){
 
+			alert("hola mundo");
 			e.preventDefault();
 
 			var token = '20747630d1e1b9ffa4993a11a96d2c3e0f4f8fe6256d9f4c176b69a02481291b.be72d1a7d3f0b1c52d95089056f202fe';
